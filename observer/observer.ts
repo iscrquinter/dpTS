@@ -5,6 +5,7 @@ namespace ObserverPattern {
         public register(observer: Observer): void {
             console.log(observer, "is pushed!");
             this.observers.push(observer);
+            console.log("Arreglo de observadores=",this.observers[0]);
         }
 
         public unregister(observer: Observer): void {
@@ -56,8 +57,8 @@ namespace ObserverPattern {
 
         public notify(): void {
             console.log("ConcreteObserver's notify method");
-            console.log(this.name, this.state);
             this.state = this.subject.SubjectState;
+            console.log(this.name, this.state);
         }
 
         get Subject(): ConcreteSubject {
