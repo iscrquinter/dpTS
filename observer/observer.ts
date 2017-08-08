@@ -5,7 +5,6 @@ namespace ObserverPattern {
         public register(observer: Observer): void {
             console.log(observer, "is pushed!");
             this.observers.push(observer);
-            console.log("Arreglo de observadores=",this.observers[0]);
         }
 
         public unregister(observer: Observer): void {
